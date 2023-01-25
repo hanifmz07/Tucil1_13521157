@@ -1,11 +1,13 @@
 #include "24game.hpp"
 
+// Menukar elemen
 void swap(double& a, double& b) {
     double temp = a;
     a = b;
     b = temp;
 }
 
+// Algoritma pengurutan selection sort
 void selectionSort(std::vector<double>& numVec) {
     int idxMin;
     double min;
@@ -23,6 +25,7 @@ void selectionSort(std::vector<double>& numVec) {
     }
 }
 
+// Membalikkan urutan suatu sub bagian dari suatu vector
 void reverseSubVec(std::vector<double>& numVec, int idxFirst, int idxLast) {
     while (idxFirst < idxLast) {
         swap(numVec[idxFirst], numVec[idxLast]);
@@ -31,6 +34,7 @@ void reverseSubVec(std::vector<double>& numVec, int idxFirst, int idxLast) {
     }
 }
 
+// Pencarian urutan permutasi berikutnya
 bool nextPermutation(std::vector<double>& numVec) {
     int idxSwap;
     bool lastPermutation = true;
@@ -66,6 +70,7 @@ bool nextPermutation(std::vector<double>& numVec) {
     return true;
 }
 
+// Mencari kemungkinan untuk susunan tanda kurung dan susunan operator
 void computeSolution(std::vector<double> input, int& count, std::string& solution) {
     if (input[0] + input[1] + input[2] + input[3] == 24) {
         count++;

@@ -4,6 +4,7 @@
 
 int main() {
 
+    // Inisiasi variabel
     int n;
     std::string card = "";
     std::vector<double> input;
@@ -13,7 +14,7 @@ int main() {
     std::cout << "2. Random" << std::endl;
     while (true) {
         std::cin >> n;
-        if (n == 1) {
+        if (n == 1) {   // Input dari pengguna
             std::cin.clear();
             fflush(stdin);
             std::cout << "Type in the input with the format below.\nX X X X" << std::endl;
@@ -61,7 +62,7 @@ int main() {
             }
             break;
 
-        } else if (n == 2) {
+        } else if (n == 2) { // Input random
             
             srand(time(0));
             for (int i = 0; i < 4; i++) {
@@ -88,19 +89,23 @@ int main() {
 
     }
     
+    // Waktu awal
     auto time1 = std::chrono::high_resolution_clock::now();
     
 	selectionSort(input);
     int count = 0;
 	std::string solution = "";
 
+    // Pencarian solusi
     do {
 		computeSolution(input, count, solution);
     } while (nextPermutation(input));
 
+    // Waktu akhir
     auto time2 = std::chrono::high_resolution_clock::now();
     auto duration = std::chrono::duration_cast<std::chrono::microseconds>(time2 - time1);
 
+    // Pencetakan solusi, jumlah solusi, dan waktu ke layar
     if (count == 0) {
         std::cout << "No solution found." << std::endl;
     } else {
@@ -109,6 +114,7 @@ int main() {
 	std::cout << solution;
     std::cout << "Time (microseconds): " << duration.count() << std::endl;
 
+    // Penyimpanan solusi dalam file
     char save;
     std::cout << "Store the solution in a .txt file?(y/n) ";
     while (true) {
