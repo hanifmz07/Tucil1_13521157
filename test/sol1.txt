@@ -1,3 +1,2 @@
-8 4 10 K
-0 solution(s) found.
-Time (ms): 1607
+6 7 J 3No solution found.
+Time (microseconds): 1396
