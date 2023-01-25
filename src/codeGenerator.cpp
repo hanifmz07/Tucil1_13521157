@@ -54,67 +54,90 @@ int main() {
                             // A B C D
                             MyFile << "\t\tif (input[0] " << op[0] << " input[1] " << op[1] << " input[2] " << op[2] << " input[3] == 24) {" << endl;
                             MyFile << "\t\t\tcount++;" << endl;
-                            MyFile << "\t\t\tsolution += std::to_string((int) input[0]) + \" " << op[0] << " \" + std::to_string((int) input[1]) + \" " << op[1] << " \" + std::to_string((int) input[2]) + \" " << op[2] << " \" + std::to_string((int) input[3]) + \"\\n\";\n\t\t}" << endl;
+                            MyFile << "\t\t\tsolution += std::to_string((int) input[0]) + \" " <<
+                            op[0] << " \" + std::to_string((int) input[1]) + \" " << op[1] <<
+                            " \" + std::to_string((int) input[2]) + \" " << op[2] << " \" + std::to_string((int) input[3]) + \"\\n\";\n\t\t}" << endl;
                             break;
                         case 1:
                             // (A B) C D
                             MyFile << "\t\tif ((input[0] " << op[0] << " input[1]) " << op[1] << " input[2] " << op[2] << " input[3] == 24) {" << endl;
                             MyFile << "\t\t\tcount++;" << endl;
-                            MyFile << "\t\t\tsolution += \"(\" + std::to_string((int) input[0]) + \" " << op[0] << " \" + std::to_string((int) input[1]) + \")\" + \" " << op[1] << " \" + std::to_string((int) input[2]) + \" " << op[2] << " \" + std::to_string((int) input[3]) + \"\\n\";\n\t\t}" << endl;
+                            MyFile << "\t\t\tsolution += \"(\" + std::to_string((int) input[0]) + \" " <<
+                            op[0] << " \" + std::to_string((int) input[1]) + \")\" + \" " << op[1] <<
+                            " \" + std::to_string((int) input[2]) + \" " << op[2] << " \" + std::to_string((int) input[3]) + \"\\n\";\n\t\t}" << endl;
                             break;
                         case 2:
                             // A (B C) D
                             MyFile << "\t\tif (input[0] " << op[0] << " (input[1] " << op[1] << " input[2]) " << op[2] << " input[3] == 24) {" << endl;
                             MyFile << "\t\t\tcount++;" << endl;
-                            MyFile << "\t\t\tsolution += std::to_string((int) input[0]) + \" " << op[0] << " \" + \"(\" + std::to_string((int) input[1]) + \" " << op[1] << " \" + std::to_string((int) input[2]) + \")\" + \" " << op[2] << " \" + std::to_string((int) input[3]) + \"\\n\";\n\t\t}" << endl;
+                            MyFile << "\t\t\tsolution += std::to_string((int) input[0]) + \" " << op[0] <<
+                            " \" + \"(\" + std::to_string((int) input[1]) + \" " << op[1] <<
+                            " \" + std::to_string((int) input[2]) + \")\" + \" " << op[2] << " \" + std::to_string((int) input[3]) + \"\\n\";\n\t\t}" << endl;
                             break;
                         case 3:
                             // A B (C D)
                             MyFile << "\t\tif (input[0] " << op[0] << " input[1] " << op[1] << " (input[2] " << op[2] << " input[3]) == 24) {" << endl;
                             MyFile << "\t\t\tcount++;" << endl;
-                            MyFile << "\t\t\tsolution += std::to_string((int) input[0]) + \" " << op[0] << " \" + std::to_string((int) input[1]) + \" " << op[1] << " \" + \"(\" + std::to_string((int) input[2]) + \" " << op[2] << " \" + std::to_string((int) input[3]) + \")\" + \"\\n\";\n\t\t}" << endl;
+                            MyFile << "\t\t\tsolution += std::to_string((int) input[0]) + \" " << op[0] <<
+                            " \" + std::to_string((int) input[1]) + \" " << op[1] << " \" + \"(\" + std::to_string((int) input[2]) + \" " <<
+                            op[2] << " \" + std::to_string((int) input[3]) + \")\" + \"\\n\";\n\t\t}" << endl;
                             break;
                         case 4:
                             // (A B C) D
                             MyFile << "\t\tif ((input[0] " << op[0] << " input[1] " << op[1] << " input[2]) " << op[2] << " input[3] == 24) {" << endl;
                             MyFile << "\t\t\tcount++;" << endl;
-                            MyFile << "\t\t\tsolution += \"(\" + std::to_string((int) input[0]) + \" " << op[0] << " \" + std::to_string((int) input[1]) + \" " << op[1] << " \" + std::to_string((int) input[2]) + \")\" + \" " << op[2] << " \" + std::to_string((int) input[3]) + \"\\n\";\n\t\t}" << endl;
+                            MyFile << "\t\t\tsolution += \"(\" + std::to_string((int) input[0]) + \" " << op[0] <<
+                            " \" + std::to_string((int) input[1]) + \" " << op[1] <<
+                            " \" + std::to_string((int) input[2]) + \")\" + \" " << op[2] <<
+                            " \" + std::to_string((int) input[3]) + \"\\n\";\n\t\t}" << endl;
                             break;
                         case 5:
                             // A (B C D)
                             MyFile << "\t\tif (input[0] " << op[0] << " (input[1] " << op[1] << " input[2] " << op[2] << " input[3]) == 24) {" << endl;
                             MyFile << "\t\t\tcount++;" << endl;
-                            MyFile << "\t\t\tsolution += std::to_string((int) input[0]) + \" " << op[0] << " \" + \"(\" + std::to_string((int) input[1]) + \" " << op[1] << " \" + std::to_string((int) input[2]) + \" " << op[2] << " \" + std::to_string((int) input[3]) + \")\" + \"\\n\";\n\t\t}" << endl;
+                            MyFile << "\t\t\tsolution += std::to_string((int) input[0]) + \" " << op[0] <<
+                            " \" + \"(\" + std::to_string((int) input[1]) + \" " << op[1] <<
+                            " \" + std::to_string((int) input[2]) + \" " << op[2] << " \" + std::to_string((int) input[3]) + \")\" + \"\\n\";\n\t\t}" << endl;
                             break;
                         case 6:
                             // ((A B) C) D
                             MyFile << "\t\tif (((input[0] " << op[0] << " input[1]) " << op[1] << " input[2]) " << op[2] << " input[3] == 24) {" << endl;
                             MyFile << "\t\t\tcount++;" << endl;
-                            MyFile << "\t\t\tsolution += \"((\" + std::to_string((int) input[0]) + \" " << op[0] << " \" + std::to_string((int) input[1]) + \")\"+ \" " << op[1] << " \" + std::to_string((int) input[2]) + \")\" + \" " << op[2] << " \" + std::to_string((int) input[3]) + \"\\n\";\n\t\t}" << endl;
+                            MyFile << "\t\t\tsolution += \"((\" + std::to_string((int) input[0]) + \" " << op[0] <<
+                            " \" + std::to_string((int) input[1]) + \")\"+ \" " << op[1] <<
+                            " \" + std::to_string((int) input[2]) + \")\" + \" " << op[2] << " \" + std::to_string((int) input[3]) + \"\\n\";\n\t\t}" << endl;
                             break;
                         case 7:
                             // (A (B C)) D
                             MyFile << "\t\tif ((input[0] " << op[0] << " (input[1] " << op[1] << " input[2])) " << op[2] << " input[3] == 24) {" << endl;
                             MyFile << "\t\t\tcount++;" << endl;
-                            MyFile << "\t\t\tsolution += \"(\" + std::to_string((int) input[0]) + \" " << op[0] << " \" + \"(\" + std::to_string((int) input[1]) + \" " << op[1] << " \" + std::to_string((int) input[2]) + \"))\" + \" " << op[2] << " \" + std::to_string((int) input[3]) + \"\\n\";\n\t\t}" << endl;
+                            MyFile << "\t\t\tsolution += \"(\" + std::to_string((int) input[0]) + \" " << op[0] <<
+                            " \" + \"(\" + std::to_string((int) input[1]) + \" " << op[1] <<
+                            " \" + std::to_string((int) input[2]) + \"))\" + \" " << op[2] << " \" + std::to_string((int) input[3]) + \"\\n\";\n\t\t}" << endl;
                             break;
                         case 8:
                             // A ((B C) D)
                             MyFile << "\t\tif (input[0] " << op[0] << " ((input[1] " << op[1] << " input[2]) " << op[2] << " input[3]) == 24) {" << endl;
                             MyFile << "\t\t\tcount++;" << endl;
-                            MyFile << "\t\t\tsolution += std::to_string((int) input[0]) + \" " << op[0] << " \" + \"((\" + std::to_string((int) input[1]) + \" " << op[1] << " \" + std::to_string((int) input[2]) + \")\" + \" " << op[2] << " \" + std::to_string((int) input[3]) + \")\" + \"\\n\";\n\t\t}" << endl;
+                            MyFile << "\t\t\tsolution += std::to_string((int) input[0]) + \" " << op[0] <<
+                            " \" + \"((\" + std::to_string((int) input[1]) + \" " << op[1] <<
+                            " \" + std::to_string((int) input[2]) + \")\" + \" " << op[2] << " \" + std::to_string((int) input[3]) + \")\" + \"\\n\";\n\t\t}" << endl;
                             break;
                         case 9:
                             // A (B (C D))
                             MyFile << "\t\tif (input[0] " << op[0] << " (input[1] " << op[1] << " (input[2] " << op[2] << " input[3])) == 24) {" << endl;
                             MyFile << "\t\t\tcount++;" << endl;
-                            MyFile << "\t\t\tsolution += std::to_string((int) input[0]) + \" " << op[0] << " \" + \"(\" + std::to_string((int) input[1]) + \" " << op[1] << " \" + \"(\" + std::to_string((int) input[2]) + \" " << op[2] << " \" + std::to_string((int) input[3]) + \"))\" + \"\\n\";\n\t\t}" << endl;
+                            MyFile << "\t\t\tsolution += std::to_string((int) input[0]) + \" " << op[0] <<
+                            " \" + \"(\" + std::to_string((int) input[1]) + \" " << op[1] <<
+                            " \" + \"(\" + std::to_string((int) input[2]) + \" " << op[2] << " \" + std::to_string((int) input[3]) + \"))\" + \"\\n\";\n\t\t}" << endl;
                             break;
                         case 10:
                             // (A B) (C D)
                             MyFile << "\t\tif ((input[0] " << op[0] << " input[1]) " << op[1] << " (input[2] " << op[2] << " input[3]) == 24) {" << endl;
                             MyFile << "\t\t\tcount++;" << endl;
-                            MyFile << "\t\t\tsolution += \"(\" + std::to_string((int) input[0]) + \" " << op[0] << " \" + std::to_string((int) input[1]) + \")\" + \" " << op[1] << " \" + \"(\" + std::to_string((int) input[2]) + \" " << op[2] << " \" + std::to_string((int) input[3]) + \")\" + \"\\n\";\n\t\t}" << endl;
+                            MyFile << "\t\t\tsolution += \"(\" + std::to_string((int) input[0]) + \" " << op[0] <<
+                            " \" + std::to_string((int) input[1]) + \")\" + \" " << op[1] <<
+                            " \" + \"(\" + std::to_string((int) input[2]) + \" " << op[2] << " \" + std::to_string((int) input[3]) + \")\" + \"\\n\";\n\t\t}" << endl;
                             break;
                     }
                 }
