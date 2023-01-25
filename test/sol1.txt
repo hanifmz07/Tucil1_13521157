@@ -1,2 +1,3 @@
-6 7 J 3No solution found.
-Time (microseconds): 1396
+6 7 J 3
+No solution found.
+Time (microseconds): 1531

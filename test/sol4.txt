@@ -1,5 +1,6 @@
-A Q K 724 solution(s) found.
-Time (microseconds): 1664
+A Q K 7
+24 solution(s) found.
+Time (microseconds): 1634
 (1 + 13) / 7 * 12
 ((1 + 13) / 7) * 12
 (1 + 13) / (7 / 12)

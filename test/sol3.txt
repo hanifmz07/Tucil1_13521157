@@ -1,5 +1,6 @@
-6 6 6 617 solution(s) found.
-Time (microseconds): 760
+6 6 6 6
+17 solution(s) found.
+Time (microseconds): 753
 6 + 6 + 6 + 6
 6 * 6 - 6 - 6
 (6 + 6) + 6 + 6

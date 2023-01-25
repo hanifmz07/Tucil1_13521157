@@ -79,8 +79,7 @@ int main() {
                     card += std::to_string((int)input[i]) + " ";
                 }
             }
-            card += "\n";
-            std::cout << card;
+            std::cout << card << std::endl;
             break;
 
         } else {
@@ -126,7 +125,7 @@ int main() {
 			std::cin >> name;
 			std::ofstream FileSolution("test/" + name + ".txt");
 
-            FileSolution << card;
+            FileSolution << card << std::endl;
             if (count == 0) {
                 FileSolution << "No solution found." << std::endl;
             } else {
